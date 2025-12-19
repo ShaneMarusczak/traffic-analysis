@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Output data - DO NOT COMMIT
+data/
+reports/
+output_frames/
+*.csv
+
+# YOLO model weights (download separately)
+*.pt
+*.onnx
+*.engine
+*.trt
+
+# Jetson-specific binaries (platform-specific, too large)
+*.whl
+*.whl.*
+*.tar.xz
+*.tar.gz
+libcusparse*/
+torchvision/
+
+# IDE and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local config overrides
+config.local.yaml

@@ -1,0 +1,53 @@
+# Traffic Analysis System Configuration
+
+# Camera settings
+camera:
+  url: "http://192.168.86.37:4747/video"
+
+# Detection model settings
+detection:
+  model_file: "yolov8n.pt"
+  confidence_threshold: 0.25
+  vehicle_classes: [2, 3, 5, 7]  # car, motorcycle, bus, truck
+
+# Region of Interest
+roi:
+  use_left_half: true  # Process left half of frame only
+
+# Tracking settings
+tracking:
+  min_time_before_count: 0.1  # Minimum seconds to track before counting
+
+# Perspective correction
+perspective:
+  rtl_correction_factor: 1.15  # RTL lane is farther from camera
+
+# Frame saving
+frame_saving:
+  enabled: false
+  interval: 500  # Save every Nth frame
+  output_dir: "output_frames"
+
+# Output directories
+output:
+  csv_dir: "data"
+  reports_dir: "reports"
+
+# Analysis settings
+analysis:
+  report_update_interval: 10  # Update report every N vehicles
+  percentile_low: 5
+  percentile_high: 95
+  normal_range_bins: 4
+
+# Interpretation thresholds
+thresholds:
+  clustering_threshold: 60  # Percent for high/low speed clustering
+  directional_difference: 10  # Percent threshold for directional comparison
+
+# Runtime settings
+runtime:
+  default_duration_hours: 1.0
+  analyzer_startup_delay: 0.5
+  detector_shutdown_timeout: 5
+  analyzer_shutdown_timeout: 10
